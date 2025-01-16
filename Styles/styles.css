@@ -34,19 +34,17 @@ body {
 }
 
 .buttons-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: space-between;
+    display: grid;                 /* Usamos Grid en lugar de Flex */
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    gap: 10px;                     /* Espacio entre botones */
     padding: 20px;
-    background-color: #005ea2; /* Fondo azul */
+    background-color: #005ea2;    /* Fondo azul */
     border-radius: 1px;
 }
 
 .icon-button {
     background-color: #005ea2;
     border: 2px solid #005ea2;
-    width: 30%;
     padding: 10px;
     text-align: center;
     border-radius: 25px;
@@ -81,6 +79,7 @@ body {
     margin-top: 10px;
     font-size: 12px;
     font-weight: bold;
+    color: white; /* Color blanco para los textos de los botones */
 }
 
 .accounts {
@@ -126,53 +125,30 @@ body {
     font-weight: bold;
 }
 
-@media (min-width: 768px) {
-    .icon-button {
-        width: 48%;
-    }
-
-    .account-item p {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    .icon-button {
-        width: 100%;
-    }
-
-    .buttons-container {
-        gap: 8px;
-    }
-}
-.account h2 {
-    font-size: 12px;
-    margin-bottom: 10px;
-    color: #635959; /* Color gris para el encabezado "CUENTAS EN PESOS" */
-}
-.account-status {
-    font-size: 12px;
-    color: #808080; /* Color gris para "Saldo disponible" */
-}
-
-.icon-button p {
-    margin-top: 10px;
-    font-size: 12px;
-    color: white; /* Color blanco para los textos de los botones */
-}
 .separator {
     display: flex;           /* Usamos Flexbox para alinear el contenido */
     justify-content: center; /* Centra horizontalmente */
     align-items: center;     /* Centra verticalmente */
     font-size: 30px;         /* Ajusta el tamaño del símbolo */
     color: #ffffff;          /* Color blanco */
-    margin: 0px 0;          /* Ajuste de márgenes para separarlo */
+    margin: 0;          /* Ajuste de márgenes para separarlo */
     background-color: #005ea2;  /* Fondo azul para que esté en la parte azul */
-    height: 30px;            /* Ajusta la altura si es necesario */
+    height: 50px;            /* Ajusta la altura si es necesario */
 }
 
 .separator p {
     margin: 0;               /* Elimina cualquier margen extra */
 }
 
+/* Ajustes para que siempre haya 2 filas con 3 columnas en todas las pantallas */
+@media (max-width: 768px) {
+    .buttons-container {
+        grid-template-columns: repeat(3, 1fr); /* Mantiene 3 columnas por fila */
+    }
+}
 
+@media (max-width: 480px) {
+    .buttons-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 botones por fila */
+    }
+}
