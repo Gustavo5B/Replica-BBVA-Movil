@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0e539e;
+    color: #333;
+}
+
+.app-container {
+    max-width: 380px;
+    margin: 0 auto;
+    background-color: #f8f9f9;
+}
+
+.header {
+    background-color: #005ea2;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+}
+
+.buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #005ea2; /* Fondo azul */
+    border-radius: 1px;
+}
+
+.icon-button {
+    background-color: #005ea2;
+    border: 2px solid #005ea2;
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-button:hover {
+    background-color: #005ea2;
+    transform: scale(1.05);
+}
+
+.icon {
+    background-color: transparent; /* Eliminando el fondo blanco */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon img {
+    width: 30px;
+    height: 29px;
+}
+
+.icon-button p {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.accounts {
+    padding: 15px;
+}
+
+.account {
+    background-color: #fefefe;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.account h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #005ea2; /* Color azul para los encabezados de cuentas */
+}
+
+.account-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.account-name {
+    color: #005ea2;
+}
+
+.account-balance {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.account-number {
+    font-size: 14px;
+}
+
+.account-status {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .icon-button {
+        width: 48%;
+    }
+
+    .account-item p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .icon-button {
+        width: 100%;
+    }
+
+    .buttons-container {
+        gap: 8px;
+    }
+}
+.account h2 {
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #635959; /* Color gris para el encabezado "CUENTAS EN PESOS" */
+}
+.account-status {
+    font-size: 12px;
+    color: #808080; /* Color gris para "Saldo disponible" */
+}
+
+.icon-button p {
+    margin-top: 10px;
+    font-size: 12px;
+    color: white; /* Color blanco para los textos de los botones */
+}
+.separator {
+    display: flex;           /* Usamos Flexbox para alinear el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+    font-size: 30px;         /* Ajusta el tamaño del símbolo */
+    color: #ffffff;          /* Color blanco */
+    margin: 0px 0;          /* Ajuste de márgenes para separarlo */
+    background-color: #005ea2;  /* Fondo azul para que esté en la parte azul */
+    height: 30px;            /* Ajusta la altura si es necesario */
+}
+
+.separator p {
+    margin: 0;               /* Elimina cualquier margen extra */
+}
+
+
